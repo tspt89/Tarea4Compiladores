@@ -2,6 +2,7 @@
 %{
 #include<stdio.h>
 #include<math.h>
+#include "tabla.h"
 extern int yylex();
 int yyerror(char const * s);
 
@@ -22,11 +23,11 @@ prog : PROGRAM ID opt_decls BEGINPROG opt_stmts FINEXP {printf("Valor = %d\n", $
 
 opt_decls : decl_lst | ;
 
-decl_lst : decl PNTCMA decl_lst | decl;
+decl_lst : decl PNTCMA decl_lst | decl ;
 
 decl : LET id_lst DSPNT tipo ;
 
-id_lst :  ID COMA id_lst | ID;
+id_lst : ID COMA id_lst | ID;
 
 tipo : INT | REAL | BOOL;
 

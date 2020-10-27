@@ -362,16 +362,16 @@ struct yy_trans_info
 	};
 static const flex_int16_t yy_accept[98] =
     {   0,
-        2,    2,   40,   39,   31,   33,   29,   30,   27,   25,
-        8,   26,   28,    2,   39,   34,   36,   35,    3,    3,
-        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
-        3,    3,   32,    0,    2,    2,   12,    3,    3,    3,
-        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
-        3,    3,    3,    3,    1,    3,    3,    3,    3,    3,
-        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
-        1,    1,    3,    3,    3,    3,    3,    6,    3,    3,
-        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
-        3,    3,    3,    3,    3,    3,    0
+        2,    2,   40,   39,   30,   32,   28,   29,   26,   24,
+       25,   27,    2,    8,    7,   33,   35,   34,   38,   38,
+       38,   38,   38,   38,   38,   38,   38,   38,   38,   38,
+       38,   38,   31,    0,    2,    2,   12,   38,   38,   38,
+       38,   38,   18,   38,   38,   15,   13,   38,   38,   38,
+       38,   38,   38,   38,    1,   38,   38,   38,   38,   38,
+       21,    9,    6,   38,   38,   38,   38,   38,   38,   38,
+        1,    1,   38,   36,   38,   11,   16,    5,   38,   38,
+       22,   10,   38,   14,   38,   38,   37,    4,   23,   38,
+       38,   20,   17,   38,   19,    3,    0
 
     } ;
 
@@ -381,8 +381,8 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    2,    1,    1,    1,    1,    3,    1,    4,
-        5,    6,    7,    8,    9,   10,   11,   12,   13,   13,
-       13,   13,   13,   13,   13,   13,   13,   14,    1,   15,
+        5,    6,    7,    1,    8,    9,   10,   11,   12,   12,
+       12,   12,   12,   12,   12,   12,   12,   13,   14,   15,
        16,   17,    1,    1,   18,   18,   18,   18,   18,   19,
        18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
        18,   18,   18,   20,   18,   18,   18,   18,   18,   18,
@@ -410,7 +410,7 @@ static const YY_CHAR yy_ec[256] =
 static const YY_CHAR yy_meta[40] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    2,    2,    1,    1,    1,    1,    2,    2,    2,
+        2,    2,    1,    1,    1,    1,    1,    2,    2,    2,
         2,    2,    2,    2,    2,    2,    2,    2,    2,    2,
         2,    2,    2,    2,    2,    2,    2,    2,    1
     } ;
@@ -418,13 +418,13 @@ static const YY_CHAR yy_meta[40] =
 static const flex_int16_t yy_base[99] =
     {   0,
         0,    0,  113,  114,  114,  114,  114,  114,  114,  114,
-      114,  114,  114,   30,   96,  114,  114,  114,    0,   90,
+      114,  114,   31,   96,  114,  114,  114,  114,    0,   90,
        76,   17,   77,   15,   80,   20,   83,   72,   81,   77,
-       72,   75,  114,   88,   40,   44,  114,    0,   71,   62,
+       72,   75,  114,   89,   41,   45,  114,    0,   71,   62,
        72,   65,    0,   61,   72,    0,    0,   58,   57,   27,
-       27,   68,   55,   62,   49,   54,   64,   59,   57,   61,
-       74,    0,    0,   52,   56,   35,   57,   49,   51,   49,
-       53,   55,   53,    0,   45,    0,    0,  114,   39,   40,
+       27,   68,   55,   62,   50,   54,   64,   59,   57,   61,
+       75,    0,    0,   52,   56,   35,   57,   49,   51,   49,
+       54,   56,   53,    0,   45,    0,    0,  114,   39,   40,
         0,    0,   52,    0,   43,   47,    0,    0,    0,   49,
        33,    0,    0,   33,    0,    0,  114,   45
 
@@ -447,8 +447,8 @@ static const flex_int16_t yy_def[99] =
 
 static const flex_int16_t yy_nxt[154] =
     {   0,
-        4,    5,    6,    7,    8,    9,   10,   11,   12,    4,
-       13,    4,   14,   15,   16,   17,   18,   19,   20,   21,
+        4,    5,    6,    7,    8,    9,   10,   11,    4,   12,
+        4,   13,   14,   15,   16,   17,   18,   19,   20,   21,
        19,   22,   23,   24,   25,   19,   19,   26,   27,   19,
        19,   19,   28,   29,   19,   30,   31,   32,   33,   34,
        41,   35,   36,   44,   47,   45,   38,   66,   42,   34,
@@ -471,8 +471,8 @@ static const flex_int16_t yy_chk[154] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,   14,
-       22,   14,   14,   24,   26,   24,   98,   51,   22,   35,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,   13,
+       22,   13,   13,   24,   26,   24,   98,   51,   22,   35,
        26,   35,   35,   36,   50,   36,   36,   66,   50,   51,
        55,   55,   94,   66,   71,   71,   72,   72,   91,   90,
        86,   85,   83,   80,   79,   75,   73,   70,   69,   68,
@@ -480,7 +480,7 @@ static const flex_int16_t yy_chk[154] =
        53,   52,   49,   48,   45,   44,   42,   41,   40,   39,
 
        34,   32,   31,   30,   29,   28,   27,   25,   23,   21,
-       20,   15,    3,   97,   97,   97,   97,   97,   97,   97,
+       20,   14,    3,   97,   97,   97,   97,   97,   97,   97,
        97,   97,   97,   97,   97,   97,   97,   97,   97,   97,
        97,   97,   97,   97,   97,   97,   97,   97,   97,   97,
        97,   97,   97,   97,   97,   97,   97,   97,   97,   97,
@@ -790,192 +790,192 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 YY_RULE_SETUP
 #line 16 "calculadora.lex"
-{return REAL;}
+{printf("REAL\n");return REAL;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
 #line 17 "calculadora.lex"
-{yylval = atoi(yytext); return NUMI; /* Convierte el NUM a numero */}
+{yylval = atoi(yytext); printf("NUMI\n");return NUMI; /* Convierte el NUM a numero */}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 18 "calculadora.lex"
-{return ID;}
+#line 20 "calculadora.lex"
+{printf("PROG\n");return PROGRAM;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 20 "calculadora.lex"
-{return PROGRAM;}
+#line 21 "calculadora.lex"
+{printf("BEGIN\n");return BEGINPROG;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 21 "calculadora.lex"
-{return BEGINPROG;}
+#line 22 "calculadora.lex"
+{printf("END.\n");return FINEXP;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 22 "calculadora.lex"
-{return FINEXP;}
+#line 23 "calculadora.lex"
+{printf("LET\n");return LET;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 23 "calculadora.lex"
-{return LET;}
+#line 24 "calculadora.lex"
+{printf(";\n");return PNTCMA;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 24 "calculadora.lex"
-{return PNTCMA;}
+#line 25 "calculadora.lex"
+{printf(":\n");return DSPNT;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 25 "calculadora.lex"
-{return INT;}
+#line 26 "calculadora.lex"
+{printf("INT\n");return INT;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 26 "calculadora.lex"
-{return REAL;}
+#line 27 "calculadora.lex"
+{printf("REAL\n");return REAL;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 27 "calculadora.lex"
-{return BOOL;}
+#line 28 "calculadora.lex"
+{printf("BOOL\n");return BOOL;}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 28 "calculadora.lex"
-{return ASIG;}
+#line 29 "calculadora.lex"
+{printf("ASIG\n");return ASIG;}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 29 "calculadora.lex"
-{return IF;}
+#line 30 "calculadora.lex"
+{printf("IF\n");return IF;}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 30 "calculadora.lex"
-{return THEN;}
+#line 31 "calculadora.lex"
+{printf("THEN\n");return THEN;}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 31 "calculadora.lex"
-{return FI;}
+#line 32 "calculadora.lex"
+{printf("FI\n");return FI;}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 32 "calculadora.lex"
-{return ELSE;}
+#line 33 "calculadora.lex"
+{printf("ELSE\n");return ELSE;}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 33 "calculadora.lex"
-{return WHILE;}
+#line 34 "calculadora.lex"
+{printf("WHILE\n");return WHILE;}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 34 "calculadora.lex"
-{return DO;}
+#line 35 "calculadora.lex"
+{printf("DO\n");return DO;}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 35 "calculadora.lex"
-{return ASIG;}
+#line 36 "calculadora.lex"
+{printf("REPEAT\n");return REPEAT;}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 36 "calculadora.lex"
-{return ASIG;}
+#line 37 "calculadora.lex"
+{printf("UNTIL\n");return UNTIL;}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 37 "calculadora.lex"
-{return ASIG;}
+#line 38 "calculadora.lex"
+{printf("END\n");return END;}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 38 "calculadora.lex"
-{return ASIG;}
+#line 39 "calculadora.lex"
+{printf("READ\n");return READ;}
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 39 "calculadora.lex"
-{return ASIG;}
+#line 40 "calculadora.lex"
+{printf("PRINT\n");return PRINT;}
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 40 "calculadora.lex"
-{return ASIG;}
+#line 41 "calculadora.lex"
+{printf("+\n");return SUMA;}	/* Se encontro un simbolo de suma */
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 41 "calculadora.lex"
-{return SUMA;}	/* Se encontro un simbolo de suma */
+#line 42 "calculadora.lex"
+{printf("-\n");return RESTA;}	/* Se encontro un simbolo de resta */
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 42 "calculadora.lex"
-{return RESTA;}	/* Se encontro un simbolo de resta */
+#line 43 "calculadora.lex"
+{printf("*\n");return MULTI;}	/* Se encontro un simbolo de multiplicacion */
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 43 "calculadora.lex"
-{return MULTI;}	/* Se encontro un simbolo de multiplicacion */
+#line 44 "calculadora.lex"
+{printf("/\n");return DIVIDE;}	/* Se encontro un simbolo de division */
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 44 "calculadora.lex"
-{return DIVIDE;}	/* Se encontro un simbolo de division */
+#line 46 "calculadora.lex"
+{printf("(\n");return PARENI;}	/* Se encontro un "(" */
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 46 "calculadora.lex"
-{return PARENI;}	/* Se encontro un "(" */
+#line 47 "calculadora.lex"
+{printf(")\n");return PAREND;}	/* Se encontro un ")" */
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 47 "calculadora.lex"
-{return PAREND;}	/* Se encontro un ")" */
+#line 49 "calculadora.lex"
+{printf("!\n");return NEG;}
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 49 "calculadora.lex"
-{return NEG;}
+#line 50 "calculadora.lex"
+{printf("|\n");return OR;}
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 50 "calculadora.lex"
-{return OR;}
+#line 51 "calculadora.lex"
+{printf("&\n");return AND;}
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 51 "calculadora.lex"
-{return AND;}
+#line 53 "calculadora.lex"
+{printf("<\n");return MENOR;}
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 53 "calculadora.lex"
-{return MENOR;}
+#line 54 "calculadora.lex"
+{printf(">\n");return MAYOR;}
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 54 "calculadora.lex"
-{return MAYOR;}
+#line 55 "calculadora.lex"
+{printf("=\n");return IGUAL;}
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 55 "calculadora.lex"
-{return IGUAL;}
+#line 56 "calculadora.lex"
+{printf("True\n");return TRUE;}
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 56 "calculadora.lex"
-{return TRUE;}
+#line 57 "calculadora.lex"
+{printf("False\n");return FALSE;}
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 57 "calculadora.lex"
-{return FALSE;}
+#line 59 "calculadora.lex"
+{printf("ID %s\n",yytext);return ID;}
 	YY_BREAK
 case 39:
 YY_RULE_SETUP

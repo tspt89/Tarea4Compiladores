@@ -71,11 +71,12 @@
 
 #include<stdio.h>
 #include<math.h>
+#include "tabla.h"
 extern int yylex();
 int yyerror(char const * s);
 
 
-#line 79 "calculadora.tab.c"
+#line 80 "calculadora.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -532,11 +533,11 @@ static const yytype_int8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_int8 yyrline[] =
 {
-       0,    20,    20,    23,    23,    25,    25,    27,    29,    29,
-      31,    31,    31,    33,    34,    35,    36,    37,    38,    39,
-      40,    41,    43,    43,    45,    45,    47,    48,    49,    51,
-      52,    53,    55,    56,    57,    58,    60,    61,    62,    64,
-      65,    67,    68,    69,    70,    71,    71
+       0,    21,    21,    24,    24,    26,    26,    28,    30,    30,
+      32,    32,    32,    34,    35,    36,    37,    38,    39,    40,
+      41,    42,    44,    44,    46,    46,    48,    49,    50,    52,
+      53,    54,    56,    57,    58,    59,    61,    62,    63,    65,
+      66,    68,    69,    70,    71,    72,    72
 };
 #endif
 
@@ -1168,13 +1169,13 @@ yyreduce:
   switch (yyn)
     {
   case 2: /* prog: PROGRAM ID opt_decls BEGINPROG opt_stmts FINEXP  */
-#line 20 "calculadora.y"
+#line 21 "calculadora.y"
                                                        {printf("Valor = %d\n", yyvsp[-5]);}
-#line 1174 "calculadora.tab.c"
+#line 1175 "calculadora.tab.c"
     break;
 
 
-#line 1178 "calculadora.tab.c"
+#line 1179 "calculadora.tab.c"
 
       default: break;
     }
@@ -1368,7 +1369,7 @@ yyreturn:
   return yyresult;
 }
 
-#line 73 "calculadora.y"
+#line 74 "calculadora.y"
 
 
 int yyerror(char const * s) {
