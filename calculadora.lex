@@ -8,19 +8,53 @@
 %}
 
 LETRA [A-Za-z]
-DIGITO [0-9]
+IDENTIFICADOR [a-zA-Z][a-zA-Z0-9]*
+DIGITO [1-9][0-9]*
 
 %%
 
-{DIGITO}* {yylval = atoi(yytext); return NUM; /* Convierte el NUM a numero */}
+{DIGITO}+"."{DIGITO}+ {return REAL;}
+{DIGITO}* {yylval = atoi(yytext); return NUMI; /* Convierte el NUM a numero */}
+{IDENTIFICADOR} {return ID;}
+
+"program" {return PROGRAM;}
+"begin"	  {return BEGINPROG;}
+"end."		{return FINEXP;}
+"let"		{return LET;}
+","			{return PNTCMA;}
+"int"		{return INT;}
+"real"		{return REAL;}
+"bool"		{return BOOL;}
+":="		{return ASIG;}
+"if"		{return IF;}
+"then"		{return THEN;}
+"fi"		{return FI;}
+"else"		{return ELSE;}
+"while"		{return WHILE;}
+"do"		{return DO;}
+"repeat"		{return ASIG;}
+"until"		{return ASIG;}
+"begin"		{return ASIG;}
+"end"		{return ASIG;}
+"read"		{return ASIG;}
+"print"		{return ASIG;}
 "+"       {return SUMA;}	/* Se encontro un simbolo de suma */
 "-"       {return RESTA;}	/* Se encontro un simbolo de resta */
 "*"       {return MULTI;}	/* Se encontro un simbolo de multiplicacion */
 "/"       {return DIVIDE;}	/* Se encontro un simbolo de division */
-"%"		  {return MOD;}		/* Se encontro un simbolo de modulo */
-"^" 	  {return POT;}		/* Se encontro un simbolo de potencia */
+
 "("       {return PARENI;}	/* Se encontro un "(" */
 ")"       {return PAREND;}	/* Se encontro un ")" */
-"$"       {return FINEXP;}	/* Se encontro un $, que es simbolo de fin de expr */
+
+"!"		{return NEG;}
+"|"		{return OR;}
+"&"		{return AND;}
+
+"<"		{return MENOR;}
+">"		{return MAYOR;}
+"="		{return IGUAL;}
+"True"	{return TRUE;}
+"False"	{return FALSE;}
+
 
 %%
