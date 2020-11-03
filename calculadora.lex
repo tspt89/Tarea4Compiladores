@@ -13,19 +13,20 @@ DIGITO [1-9][0-9]*
 
 %%
 
-{DIGITO}+"."{DIGITO}+ {printf("REAL\n");return REAL;}
-{DIGITO}* {yylval = atoi(yytext); printf("NUMI\n");return NUMI; /* Convierte el NUM a numero */}
+{DIGITO}+"."{DIGITO}+ {yylval.real = atof(yytext); printf("REAL\n");return NUMR;}
+{DIGITO}* {yylval.entero = atoi(yytext); printf("NUMI\n");return NUMI; /* Convierte el NUM a numero */}
 
 
 "program" 	{printf("PROG\n");return PROGRAM;}
-"begin"		{printf("BEGIN\n");return BEGINPROG;}
+"begin"		{printf("BEGIN P\n");return BEGINPROG;}
 "end."		{printf("END.\n");return FINEXP;}
+","			{printf("COMA\n");return COMA;}
 "let"		{printf("LET\n");return LET;}
 ";"			{printf(";\n");return PNTCMA;}
 ":"			{printf(":\n");return DSPNT;}
-"int"		{printf("INT\n");return INT;}
-"real"		{printf("REAL\n");return REAL;}
-"bool"		{printf("BOOL\n");return BOOL;}
+"int"		{yylval.tipo = 0; printf("INT\n");return INT;}
+"real"		{yylval.tipo = 1; printf("REAL\n");return REAL;}
+"bool"		{yylval.tipo = 2; printf("BOOL\n");return BOOL;}
 ":="		{printf("ASIG\n");return ASIG;}
 "if"		{printf("IF\n");return IF;}
 "then"		{printf("THEN\n");return THEN;}
@@ -56,5 +57,9 @@ DIGITO [1-9][0-9]*
 "True"	{printf("True\n");return TRUE;}
 "False"	{printf("False\n");return FALSE;}
 
-{IDENTIFICADOR} {printf("ID %s\n",yytext);return ID;}
+{IDENTIFICADOR} {
+	yylval.ident = (char *)malloc(128*sizeof(char));
+	strcpy(yylval.ident,yytext);
+	printf("ID {%s}\n",yytext);
+	return ID; }
 %%

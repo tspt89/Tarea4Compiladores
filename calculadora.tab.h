@@ -55,51 +55,64 @@ extern int yydebug;
     YYerror = 256,                 /* error  */
     YYUNDEF = 257,                 /* "invalid token"  */
     PROGRAM = 258,                 /* PROGRAM  */
-    ID = 259,                      /* ID  */
-    BEGINPROG = 260,               /* BEGINPROG  */
-    PNTCMA = 261,                  /* PNTCMA  */
-    LET = 262,                     /* LET  */
-    INT = 263,                     /* INT  */
-    REAL = 264,                    /* REAL  */
-    BOOL = 265,                    /* BOOL  */
-    ASIG = 266,                    /* ASIG  */
-    IF = 267,                      /* IF  */
-    THEN = 268,                    /* THEN  */
-    FI = 269,                      /* FI  */
-    DSPNT = 270,                   /* DSPNT  */
-    ELSE = 271,                    /* ELSE  */
-    WHILE = 272,                   /* WHILE  */
-    DO = 273,                      /* DO  */
-    REPEAT = 274,                  /* REPEAT  */
-    UNTIL = 275,                   /* UNTIL  */
-    END = 276,                     /* END  */
-    READ = 277,                    /* READ  */
-    PRINT = 278,                   /* PRINT  */
-    NUMI = 279,                    /* NUMI  */
-    NUMR = 280,                    /* NUMR  */
-    SUMA = 281,                    /* SUMA  */
-    RESTA = 282,                   /* RESTA  */
-    DIVIDE = 283,                  /* DIVIDE  */
-    MULTI = 284,                   /* MULTI  */
-    PAREND = 285,                  /* PAREND  */
-    PARENI = 286,                  /* PARENI  */
-    NEG = 287,                     /* NEG  */
-    OR = 288,                      /* OR  */
-    AND = 289,                     /* AND  */
-    MAYOR = 290,                   /* MAYOR  */
-    MENOR = 291,                   /* MENOR  */
-    IGUAL = 292,                   /* IGUAL  */
-    TRUE = 293,                    /* TRUE  */
-    FALSE = 294,                   /* FALSE  */
-    FINEXP = 295,                  /* FINEXP  */
-    COMA = 296                     /* COMA  */
+    BEGINPROG = 259,               /* BEGINPROG  */
+    PNTCMA = 260,                  /* PNTCMA  */
+    LET = 261,                     /* LET  */
+    INT = 262,                     /* INT  */
+    REAL = 263,                    /* REAL  */
+    BOOL = 264,                    /* BOOL  */
+    ASIG = 265,                    /* ASIG  */
+    IF = 266,                      /* IF  */
+    THEN = 267,                    /* THEN  */
+    FI = 268,                      /* FI  */
+    DSPNT = 269,                   /* DSPNT  */
+    ELSE = 270,                    /* ELSE  */
+    WHILE = 271,                   /* WHILE  */
+    DO = 272,                      /* DO  */
+    REPEAT = 273,                  /* REPEAT  */
+    UNTIL = 274,                   /* UNTIL  */
+    END = 275,                     /* END  */
+    READ = 276,                    /* READ  */
+    PRINT = 277,                   /* PRINT  */
+    SUMA = 278,                    /* SUMA  */
+    RESTA = 279,                   /* RESTA  */
+    DIVIDE = 280,                  /* DIVIDE  */
+    MULTI = 281,                   /* MULTI  */
+    PAREND = 282,                  /* PAREND  */
+    PARENI = 283,                  /* PARENI  */
+    NEG = 284,                     /* NEG  */
+    OR = 285,                      /* OR  */
+    AND = 286,                     /* AND  */
+    MAYOR = 287,                   /* MAYOR  */
+    MENOR = 288,                   /* MENOR  */
+    IGUAL = 289,                   /* IGUAL  */
+    TRUE = 290,                    /* TRUE  */
+    FALSE = 291,                   /* FALSE  */
+    FINEXP = 292,                  /* FINEXP  */
+    COMA = 293,                    /* COMA  */
+    NUMI = 294,                    /* NUMI  */
+    NUMR = 295,                    /* NUMR  */
+    ID = 296                       /* ID  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef int YYSTYPE;
+union YYSTYPE
+{
+#line 11 "calculadora.y"
+
+	int entero;
+	float real;
+	char * ident;
+	int tipo;
+	struct variable * var;
+
+#line 113 "calculadora.tab.h"
+
+};
+typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
 #endif

@@ -8,31 +8,45 @@ int yyerror(char const * s);
 
 %}
 
+%union{
+	int entero;
+	float real;
+	char * ident;
+	int tipo;
+	struct variable * var;
+}
+
 //Se generan tokens para que flex los pueda interpretar
-%token PROGRAM ID BEGINPROG PNTCMA LET INT REAL BOOL ASIG IF THEN FI DSPNT
-%token ELSE WHILE DO REPEAT UNTIL END READ PRINT NUMI NUMR SUMA RESTA DIVIDE
+%token PROGRAM BEGINPROG PNTCMA LET INT REAL BOOL ASIG IF THEN FI DSPNT
+%token ELSE WHILE DO REPEAT UNTIL END READ PRINT SUMA RESTA DIVIDE
 %token MULTI PAREND PARENI NEG OR AND MAYOR MENOR IGUAL TRUE FALSE FINEXP COMA
+%token <entero> NUMI
+%token <real> NUMR
+%token <ident> ID
+%type<var> id_lst
+
 %start prog
+
+
 
 %%
 
 
 
-prog : PROGRAM ID opt_decls BEGINPROG opt_stmts FINEXP {printf("Valor = %d\n", $1);}
-;
+prog : PROGRAM ID opt_decls BEGINPROG opt_stmts {printTable();} FINEXP ;
 
 opt_decls : decl_lst | ;
 
 decl_lst : decl PNTCMA decl_lst | decl ;
 
-decl : LET id_lst DSPNT tipo ;
+decl : LET id_lst  DSPNT tipo {setTipoTmpList(yylval.tipo);};
 
-id_lst : ID COMA id_lst | ID;
+id_lst : ID {insertId(yylval.ident);} COMA id_lst | ID {insertId(yylval.ident);};
 
-tipo : INT | REAL | BOOL;
+tipo : INT  | REAL | BOOL ;
 
-stmt : ID ASIG expr
-| ID ASIG boolexpr
+stmt : ID ASIG expr {checkId($1);}
+| ID ASIG boolexpr 
 | IF boolexpr THEN stmt FI
 | IF boolexpr THEN stmt ELSE stmt
 | WHILE boolexpr DO stmt
@@ -41,7 +55,7 @@ stmt : ID ASIG expr
 | READ ID
 | PRINT expr;
 
-opt_stmts : stmt_lst | ;
+opt_stmts : stmt_lst {printf("opt_stmts\n");} | ;
 
 stmt_lst : stmt_lst PNTCMA stmt | stmt;
 
@@ -55,8 +69,8 @@ term : term MULTI factor
 
 factor : PARENI expr PAREND
 | ID
-| NUMI
-| NUMR;
+| NUMI 
+| NUMR ;
 
 boolexpr : boolexpr OR boolexpr
 | NEG boolterm
