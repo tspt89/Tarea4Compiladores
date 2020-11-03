@@ -1,4 +1,0 @@
-program tres 
-	let x: int;
-   	
-   	begin end.
