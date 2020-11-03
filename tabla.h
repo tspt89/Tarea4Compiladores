@@ -21,8 +21,7 @@ struct variable *root = NULL;
 struct variable *tmpList = NULL;
 
 struct variable * insertId(char * nombre){
-	//printf("\033[1;31m");
-	//printf("INSERT ID: %s\n", nombre);
+
 	if(tmpList == NULL){
 		//printf("TEMPORAL ES NULL\n");
 		struct variable* tmp = calloc(1,sizeof(struct variable));
@@ -49,7 +48,7 @@ struct variable * insertId(char * nombre){
 }
 
 void setTipoTmpList(int tipo){
-	//printf("\033[1;31m");
+
 	struct variable* tmp = tmpList;
 	while(tmp != NULL){
 		//printf("TIPO de variable: {%d}\n",tipo );
@@ -60,8 +59,7 @@ void setTipoTmpList(int tipo){
 		if(tipo == 2) tmp->i = false;
 		tmp = tmp->next;
 	}
-	//printTableS(tmpList);
-	//printf("\033[1;0m");
+
 
 	
 	if(root == NULL){
@@ -71,11 +69,9 @@ void setTipoTmpList(int tipo){
 	} else {
 		tmp = root;
 		while(tmp->next != NULL){
-			//printf("\033[1;32m");
 			//printf("ROOT: %s\n",tmp->nombre);
 			tmp = tmp->next;
 			//printf("ROOT: %s\n",tmp->nombre);
-			//printf("\033[0m;");	
 		}	
 		//printf("ROOT: %s\n",tmp->nombre);
 		tmp->next = tmpList;
@@ -84,9 +80,7 @@ void setTipoTmpList(int tipo){
 		tmpList = NULL;
 	}
 	
-	//printf("\033[1;31m");
-	//printTable();
-	//printf("\033[1;0m");
+
 }
 
 void checkId(char * id){
@@ -108,7 +102,6 @@ void checkId(char * id){
 
 
 void printTableS(struct variable * table){
-	//printf("\033[01;33m");
 	struct variable * t = table;
 	if(t == NULL){
 		//printf("TABLE IS EMPTY !\n");
@@ -120,7 +113,6 @@ void printTableS(struct variable * table){
 			tmp = tmp->next;
 		}
 	}
-	printf("\033[0m");
 }
 
 void insert(char * nombre, int t, void* b){
@@ -163,7 +155,6 @@ void insertValue(char * nombre, int i, float f, bool b){
 }
 
 void printTable(){
-	//printf("\033[2;31m");
 	char tipo[20],valor[10];
 	if(root == NULL){
 		printf("No hay ningun elemento en la tabla\n");
