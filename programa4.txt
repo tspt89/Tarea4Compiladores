@@ -1,10 +1,10 @@
 program cuatro
    let x,y,z : int;
-   let a,b : real
+   let x,b : real
 begin
    read x;
    if x < 4 then
-      x := 4
+      xa := 4
    fi ;
 
    read a;

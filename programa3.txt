@@ -1,5 +1,5 @@
 program tres
-  let x,y,z : int
+  let x,y,x : int
 begin
    x := 1;
    y := 2;

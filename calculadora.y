@@ -41,7 +41,7 @@ decl_lst : decl PNTCMA decl_lst | decl ;
 
 decl : LET id_lst  DSPNT tipo {setTipoTmpList(yylval.tipo);};
 
-id_lst : ID {insertId(yylval.ident);} COMA id_lst | ID {insertId(yylval.ident);};
+id_lst : ID {insertId(yylval.ident);} COMA id_lst {;}| ID {insertId(yylval.ident);};
 
 tipo : INT  | REAL | BOOL ;
 
@@ -72,7 +72,7 @@ factor : PARENI expr PAREND
 | NUMI 
 | NUMR ;
 
-boolexpr : boolexpr OR boolexpr
+boolexpr : boolexpr OR boolterm
 | NEG boolterm
 | boolterm;
 

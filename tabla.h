@@ -16,12 +16,13 @@ struct variable
 
 void printTableS(struct variable * table);
 void printTable();
+void checkIdRepeated(char * id);
 
 struct variable *root = NULL;
 struct variable *tmpList = NULL;
 
 struct variable * insertId(char * nombre){
-
+	checkIdRepeated(nombre);
 	if(tmpList == NULL){
 		//printf("TEMPORAL ES NULL\n");
 		struct variable* tmp = calloc(1,sizeof(struct variable));
@@ -59,8 +60,6 @@ void setTipoTmpList(int tipo){
 		if(tipo == 2) tmp->i = false;
 		tmp = tmp->next;
 	}
-
-
 	
 	if(root == NULL){
 		//printf("ROOT IS NULL\n");
@@ -86,16 +85,61 @@ void setTipoTmpList(int tipo){
 void checkId(char * id){
 	struct variable * tmp = root;
 	printf("ID A BUSCAR: %s\n", id);
+
 	while((tmp->next != NULL) && (strcmp(id,tmp->nombre))){
 		tmp = tmp->next;
 	}
 
-	if(tmp->next == NULL){
+	if(strcmp(id,tmp->nombre) != 0){
 		printf("ID: %s not found\n",id);
 		printf("Tabla de simbolos: \n");
 		printTable();
 		exit(1);
-	} 
+	}
+}
+
+void checkIdRepeated(char * id){
+	struct variable * tmp = root;
+	printf("ID A BUSCAR: %s\n", id);
+
+	if(tmp != NULL){
+		while((tmp->next != NULL)){
+			printf("COMPARE ROOT: %s %d\n",id, (strcmp(id,tmp->nombre)));
+
+			if(strcmp(id,tmp->nombre) == 0){
+			printf("ID: %s repeated\n",id);
+			printf("Tabla de simbolos: \n");
+			printTable();
+			exit(1);
+		}
+
+			tmp = tmp->next;
+		}
+
+		
+	} else {
+		if(tmpList != NULL){
+			tmp = tmpList;
+			while((tmp->next != NULL)){
+				printf("COMPARE TMP: %s %d\n", id,(strcmp(id,tmp->nombre)));
+
+				if(strcmp(id,tmp->nombre) == 0){
+					printf("ID: %s repeated\n",id);
+					printf("Tabla de simbolos: \n");
+					printTable();
+					exit(1);
+				}
+
+				tmp = tmp->next;
+
+
+			}
+
+			
+		}
+	}
+	
+	
 
 
 }
